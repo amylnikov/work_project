@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is unknown.--><xsd:schema targetNamespace="http://roskazna.ru/xsd/PostBlock" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:pb="http://roskazna.ru/xsd/PostBlock">
+  <xsd:complexType name="PostBlock">
+    <xsd:annotation>
+      <xsd:documentation>Заголовок запроса или ответа</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="ID">
+        <xsd:annotation>
+          <xsd:documentation>Для запроса: идентификатор запроса
+Для ответа: идентификатор запроса, на который сформирован ответ</xsd:documentation>
+        </xsd:annotation>
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:minLength value="1"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="TimeStamp" type="xsd:dateTime" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation>Время формирования запроса или ответа</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="SenderIdentifier" type="xsd:string" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation>Идентификатор отправителя (например РУБП/ПУБП/НУБП)</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

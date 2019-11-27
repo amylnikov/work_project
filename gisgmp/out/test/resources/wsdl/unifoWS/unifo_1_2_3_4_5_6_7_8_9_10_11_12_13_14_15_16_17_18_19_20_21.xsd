@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is unknown.--><!--edited with XMLSpy v2011 rel. 2 (http://www.altova.com) by TeaM DJiNN (TeaM DJiNN)--><xsd:schema targetNamespace="http://roskazna.ru/xsd/ResponseTemplate" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:err="http://roskazna.ru/xsd/ErrInfo" xmlns:rst="http://roskazna.ru/xsd/ResponseTemplate" xmlns:pb="http://roskazna.ru/xsd/PostBlock">
+  <xsd:import namespace="http://roskazna.ru/xsd/PostBlock" schemaLocation="unifo_1_2_3_4_5_6_7_8_9.xsd"/>
+  <xsd:import namespace="http://roskazna.ru/xsd/ErrInfo" schemaLocation="unifo_1_2_3_4_5_6_7_8_9_10_11_12_13_14_15_16_17_18_19_20_21_22.xsd"/>
+  <xsd:complexType name="ResponseTemplate">
+    <xsd:sequence>
+      <xsd:element name="PostBlock" type="pb:PostBlock">
+        <xsd:annotation>
+          <xsd:documentation>Блок почтовой информации</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="RequestProcessResult" type="err:ErrInfo" minOccurs="0" maxOccurs="unbounded">
+        <xsd:annotation>
+          <xsd:documentation>Результат обработки запроса</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="hasMoreElements" type="xsd:boolean" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation>Признак наличия объектов для следующей порции при порционном экспорте</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

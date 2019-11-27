@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is unknown.--><!--edited with XMLSpy v2013 (http://www.altova.com) by  ()--><schema targetNamespace="http://www.id-sys.ru/schemas/idbank/unifo/2012/1.15/" elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:tns="http://www.id-sys.ru/schemas/idbank/unifo/2012/1.15/" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:rst="http://roskazna.ru/xsd/ResponseTemplate" xmlns:chg="http://roskazna.ru/xsd/Charge" xmlns:bdi="http://roskazna.ru/xsd/BudgetIndex" xmlns:org="http://roskazna.ru/xsd/Organization">
+  <import namespace="http://www.w3.org/2000/09/xmldsig#" schemaLocation="unifo_1_2_3_4_5_6_7_8_9_10_11.xsd"/>
+  <import namespace="http://roskazna.ru/xsd/ResponseTemplate" schemaLocation="unifo_1_2_3_4_5_6_7_8_9_10_11_12_13_14_15_16_17_18_19_20_21.xsd"/>
+  <import namespace="http://roskazna.ru/xsd/Charge" schemaLocation="unifo_1_2_3_4_5_6_7_8_9_10.xsd"/>
+  <import namespace="http://roskazna.ru/xsd/BudgetIndex" schemaLocation="unifo_1_2_3_4_5_6_7_8_9_10_11_12_13_14_15.xsd"/>
+  <import namespace="http://roskazna.ru/xsd/Organization" schemaLocation="unifo_1_2_3_4_5_6_7_8_9_10_11_12_13.xsd"/>
+  <complexType name="ExportChargesResponseEx">
+    <complexContent>
+      <extension base="rst:ResponseTemplate">
+        <sequence>
+          <element name="Charges" minOccurs="0">
+            <annotation>
+              <documentation>Перечень начислений</documentation>
+            </annotation>
+            <complexType>
+              <sequence>
+                <element name="ChargeInfo" maxOccurs="unbounded">
+                  <annotation>
+                    <documentation>Данные начисления</documentation>
+                  </annotation>
+                  <complexType>
+                    <sequence>
+                      <choice>
+                        <sequence>
+                          <element name="ChargeData" type="xsd:base64Binary">
+                            <annotation>
+                              <documentation>Данные файла Начисления, загруженного
+																поставщиком в УНИФО</documentation>
+                            </annotation>
+                          </element>
+                          <element name="ChargeSignature" type="xsd:base64Binary" minOccurs="0">
+                            <annotation>
+                              <documentation>Данные файла ЭЦП Начисления,
+																загруженного поставщиком в УНИФО</documentation>
+                            </annotation>
+                          </element>
+                        </sequence>
+                        <element name="Charge" type="chg:ChargeType">
+                          <annotation>
+                            <documentation>Раскодированные данные файла
+															Начисления, загруженного поставщиком в УНИФО</documentation>
+                          </annotation>
+                        </element>
+                      </choice>
+                      <element name="AmountToPay" type="xsd:long">
+                        <annotation>
+                          <documentation>Сумма, оставшаяся к уплате</documentation>
+                        </annotation>
+                      </element>
+                      <element name="QuittanceWithPaymentStatus" minOccurs="0">
+                        <annotation>
+                          <documentation>Статус квитирования с платежами
+														1 - сквитировано
+														2 - предв. сквитировано
+														3 - не сквитировано</documentation>
+                        </annotation>
+                        <simpleType>
+                          <restriction base="xsd:string">
+                            <length value="1"/>
+                            <enumeration value="1"/>
+                            <enumeration value="2"/>
+                            <enumeration value="3"/>
+                          </restriction>
+                        </simpleType>
+                      </element>
+                      <element name="QuittanceWithIncomeStatus" minOccurs="0">
+                        <annotation>
+                          <documentation>Статус квитирования с зачислениями
+														1 - сквитировано
+														2 - предв. сквитировано
+														3 - не сквитировано</documentation>
+                        </annotation>
+                        <simpleType>
+                          <restriction base="xsd:string">
+                            <length value="1"/>
+                            <enumeration value="1"/>
+                            <enumeration value="2"/>
+                            <enumeration value="3"/>
+                          </restriction>
+                        </simpleType>
+                      </element>
+                      <element name="IsRevoked" minOccurs="0">
+                        <annotation>
+                          <documentation>Признак аннулированного начисления:
+														true - начисление аннулировано;
+														false - начисление действующее</documentation>
+                        </annotation>
+                        <complexType>
+                          <simpleContent>
+                            <extension base="xsd:boolean">
+                              <attribute name="date" type="xsd:dateTime"/>
+                            </extension>
+                          </simpleContent>
+                        </complexType>
+                      </element>
+                      <element name="srcSystemID" minOccurs="0">
+                        <annotation>
+                          <documentation>ID системы - источника начисления</documentation>
+                        </annotation>
+                        <simpleType>
+                          <restriction base="token">
+                            <minLength value="1"/>
+                            <maxLength value="30"/>
+                          </restriction>
+                        </simpleType>
+                      </element>
+                      <element name="Year" type="xsd:short" minOccurs="0">
+                        <annotation>
+                          <documentation>Год</documentation>
+                        </annotation>
+                      </element>
+                      <element name="Month" type="xsd:short" minOccurs="0">
+                        <annotation>
+                          <documentation>Месяц</documentation>
+                        </annotation>
+                      </element>
+                    </sequence>
+                  </complexType>
+                </element>
+              </sequence>
+              <attribute name="hasMore" type="boolean">
+                <annotation>
+                  <documentation>false или отсутствует — достигнут конец выборки, true — после		последней выгруженной сущности в выборке имеются другие</documentation>
+                </annotation>
+              </attribute>
+              <attribute name="needReRequest" type="boolean" default="false">
+                <annotation>
+                  <documentation>true - Требуется перезапрос. В случае если для получения ответа задействуются внешняя система и ответ от неё не был получен (внешняя система недоступна либо поучена ошибка)</documentation>
+                </annotation>
+              </attribute>
+            </complexType>
+          </element>
+          <element ref="ds:Signature" minOccurs="0"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="AccDoc">
+    <annotation>
+      <documentation>Расчетный документ</documentation>
+    </annotation>
+    <sequence>
+      <element name="AccDocDate" type="date">
+        <annotation>
+          <documentation>Дата выписки расчетного документа</documentation>
+        </annotation>
+      </element>
+      <element name="AccDocNo">
+        <annotation>
+          <documentation>Номер расчетного документа</documentation>
+        </annotation>
+        <simpleType>
+          <restriction base="string">
+            <maxLength value="36"/>
+            <minLength value="0"/>
+          </restriction>
+        </simpleType>
+      </element>
+      <element name="Amount" type="long">
+        <annotation>
+          <documentation>Сумма оплаты по платежу/зачислению в копейках</documentation>
+        </annotation>
+      </element>
+      <element name="PayeeName">
+        <annotation>
+          <documentation>Наименование получателя (поле 16)</documentation>
+        </annotation>
+        <simpleType>
+          <restriction base="string">
+            <minLength value="1"/>
+            <maxLength value="160"/>
+          </restriction>
+        </simpleType>
+      </element>
+      <element name="PayeeINN">
+        <annotation>
+          <documentation>ИНН получателя</documentation>
+        </annotation>
+        <simpleType>
+          <restriction base="string">
+            <length value="10"/>
+          </restriction>
+        </simpleType>
+      </element>
+      <element name="PayeeKPP">
+        <annotation>
+          <documentation>КПП получателя</documentation>
+        </annotation>
+        <simpleType>
+          <restriction base="string">
+            <length value="9"/>
+          </restriction>
+        </simpleType>
+      </element>
+      <element name="PayeeBankName">
+        <annotation>
+          <documentation>Наименование банка получателя (поле 13)</documentation>
+        </annotation>
+        <simpleType>
+          <restriction base="string">
+            <minLength value="1"/>
+            <maxLength value="100"/>
+          </restriction>
+        </simpleType>
+      </element>
+      <element name="PayeeAcc">
+        <annotation>
+          <documentation>Номер счета получателя (поле 17)</documentation>
+        </annotation>
+        <simpleType>
+          <restriction base="string">
+            <length value="20"/>
+          </restriction>
+        </simpleType>
+      </element>
+      <element name="KBK">
+        <annotation>
+          <documentation>Код бюджетной классификации</documentation>
+        </annotation>
+        <simpleType>
+          <restriction base="string">
+            <length value="20"/>
+          </restriction>
+        </simpleType>
+      </element>
+      <element name="OKATO">
+        <annotation>
+          <documentation>Код ОКАТО</documentation>
+        </annotation>
+        <simpleType>
+          <restriction base="string">
+            <length value="11"/>
+          </restriction>
+        </simpleType>
+      </element>
+      <element name="TransKind">
+        <annotation>
+          <documentation>Вид операции (поле 18)</documentation>
+        </annotation>
+        <simpleType>
+          <restriction base="string">
+            <length value="2"/>
+          </restriction>
+        </simpleType>
+      </element>
+      <element name="Priority">
+        <annotation>
+          <documentation>Очередность платежа (поле 21)</documentation>
+        </annotation>
+        <simpleType>
+          <restriction base="string">
+            <length value="1"/>
+          </restriction>
+        </simpleType>
+      </element>
+      <element name="Narrative" nillable="true">
+        <annotation>
+          <documentation>Назначение платежа</documentation>
+        </annotation>
+        <simpleType>
+          <restriction base="string">
+            <maxLength value="255"/>
+            <minLength value="1"/>
+          </restriction>
+        </simpleType>
+      </element>
+      <element name="TaxPeriod">
+        <annotation>
+          <documentation>Налоговый период (поле 107)</documentation>
+        </annotation>
+        <simpleType>
+          <restriction base="string">
+            <minLength value="1"/>
+            <maxLength value="10"/>
+          </restriction>
+        </simpleType>
+      </element>
+      <element name="PaytReason">
+        <annotation>
+          <documentation>Основание налогового платежа (поле 106)</documentation>
+        </annotation>
+        <simpleType>
+          <restriction base="string">
+            <minLength value="1"/>
+            <maxLength value="2"/>
+          </restriction>
+        </simpleType>
+      </element>
+      <element name="DocRef" minOccurs="0">
+        <annotation>
+          <documentation>Референс документа</documentation>
+        </annotation>
+        <simpleType>
+          <restriction base="token">
+            <minLength value="1"/>
+            <maxLength value="100"/>
+          </restriction>
+        </simpleType>
+      </element>
+    </sequence>
+  </complexType>
+</schema>

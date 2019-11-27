@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" addBOMForNewFiles="with NO BOM">
+    <file url="file://$PROJECT_DIR$/gisgmp/src/main/java/com/bssys/xsd/catalog/ServiceType.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/gisgmp/src/main/java/ru/id_sys/schemas/idbank/cik/_2017/_0/ObjectFactory.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/gisgmp/src/main/java/ru/id_sys/schemas/idbank/cik/_2017/_0/Персона.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/gisgmp/src/main/java/ru/id_sys/schemas/idbank/unifo/_2012/_1/AccDoc.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/gisgmp/src/main/java/ru/id_sys/schemas/idbank/unifo/_2012/_1/GetChargesRq.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/gisgmp/src/main/java/ru/id_sys/schemas/idbank/unifo/_2012/_1_15/IDBankUnifoPortType.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/gisgmp/src/test/resources/req24_answer.csv" charset="windows-1251" />
+  </component>
+</project>

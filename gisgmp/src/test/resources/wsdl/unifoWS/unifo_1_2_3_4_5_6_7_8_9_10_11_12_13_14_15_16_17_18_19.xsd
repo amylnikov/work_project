@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is unknown.--><!--edited with XMLSpy v2011 rel. 2 (http://www.altova.com) by TeaM DJiNN (TeaM DJiNN)--><xsd:schema targetNamespace="http://roskazna.ru/xsd/RequestTemplate" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:pb="http://roskazna.ru/xsd/PostBlock" xmlns:ns1="http://roskazna.ru/xsd/RequestTemplate">
+  <xsd:import namespace="http://roskazna.ru/xsd/PostBlock" schemaLocation="unifo_1_2_3_4_5_6_7_8_9.xsd"/>
+  <xsd:complexType name="RequestTemplate">
+    <xsd:annotation>
+      <xsd:documentation>Шаблон запроса к ИС РНиП</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="PostBlock" type="pb:PostBlock">
+        <xsd:annotation>
+          <xsd:documentation>Блок почтовой информации</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="StartDate" type="xsd:dateTime" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation>Начальная дата временного интервала запроса</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="EndDate" type="xsd:dateTime" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation>Конечная дата временного интервала запроса</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Paging" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation>Порционный экспорт</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexType>
+          <xsd:attribute name="pageNumber" type="xsd:positiveInteger" use="required">
+            <xsd:annotation>
+              <xsd:documentation>Номер порции</xsd:documentation>
+            </xsd:annotation>
+          </xsd:attribute>
+          <xsd:attribute name="pageSize" type="xsd:positiveInteger">
+            <xsd:annotation>
+              <xsd:documentation>Количество объектов в порции</xsd:documentation>
+            </xsd:annotation>
+          </xsd:attribute>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+    <xsd:attribute name="kind">
+      <xsd:annotation>
+        <xsd:documentation>Тип запрашиваемых объектов:
+PAYMENT - платежи,
+PAYMENTMAINCHARGE - платежи по связанным начислениям, PAYMENTMODIFIED - уточненные платежи запрашивающего АДБ
+INCOME - зачисления, 
+CHARGE - начисления, 
+CHARGESTATUS - начисления и статусы квитирования,
+QUITTANCE - результат квитирования,
+ALLQUITTANCE - все результаты квитирования, включая аннулированные,
+PAYMENTUNMATCHED - все платежи, которым в системе не поставлена в соответствие (не сгенерена) ни одна квитанция.
+CHARGENOTFULLMATCHED - все начисления в статусе, отличном от "сквитировано"
+CATALOG - Каталог услуг поставщика
+CHARGE-PRIOR — неоплаченные предварительные начисления
+CHARGE-PRIOR-NOTFULLMATCHED — предварительные начисления, не полностью сквитированные с платежами
+CHARGE-PRIOR-STATUS —предварительные начисления и статусы их квитирования
+TEMP-CHARGING — неоплаченные предварительные начисления, сформированные ГИС ГМП
+TEMP-CHARGING-NOTFULLMATCHED - не полностью сквитованные предварительные начисления сформированные ГИС ГМП
+TEMP-CHARGING-STATUS —предварительные начисления, сформированные ГИС ГМП, и статусы их квитирования
+PAYMENTCANCELLED — аннулированные платежи</xsd:documentation>
+      </xsd:annotation>
+      <xsd:simpleType>
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="PAYMENT"/>
+          <xsd:enumeration value="PAYMENTUNMATCHED"/>
+          <xsd:enumeration value="PAYMENTMODIFIED"/>
+          <xsd:enumeration value="PAYMENTMAINCHARGE"/>
+          <xsd:enumeration value="CHARGE"/>
+          <xsd:enumeration value="CHARGENOTFULLMATCHED"/>
+          <xsd:enumeration value="INCOME"/>
+          <xsd:enumeration value="ALLQUITTANCE"/>
+          <xsd:enumeration value="QUITTANCE"/>
+          <xsd:enumeration value="CHARGESTATUS"/>
+          <xsd:enumeration value="CATALOG"/>
+          <xsd:enumeration value="CHARGE-PRIOR"/>
+          <xsd:enumeration value="CHARGE-PRIOR-NOTFULLMATCHED"/>
+          <xsd:enumeration value="CHARGE-PRIOR-STATUS"/>
+          <xsd:enumeration value="TEMP-CHARGING"/>
+          <xsd:enumeration value="TEMP-CHARGING-NOTFULLMATCHED"/>
+          <xsd:enumeration value="TEMP-CHARGING-STATUS"/>
+          <xsd:enumeration value="PAYMENTCANCELLED"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+    </xsd:attribute>
+  </xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,677 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is unknown.--><!--edited with XMLSpy v2013 (http://www.altova.com) by  ()--><schema targetNamespace="http://www.id-sys.ru/schemas/idbank/common/2012/0.01/" elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.id-sys.ru/schemas/idbank/common/2012/0.01/" xmlns:ns2="http://www.id-sys.ru/schemas/idbank/notary/2014/1.00/" xmlns:esia="http://www.id-sys.ru/schemas/idbank/esia/2015/0.01/" xmlns:os="http://www.id-sys.ru/schemas/idbank/ThirdPartyOrderService/2015/0.01/" xmlns:cik="http://www.id-sys.ru/schemas/idbank/cik/2017/0.01/">
+  <import namespace="http://www.id-sys.ru/schemas/idbank/notary/2014/1.00/" schemaLocation="unifo_1.xsd"/>
+  <import namespace="http://www.id-sys.ru/schemas/idbank/esia/2015/0.01/" schemaLocation="unifo_1_2_3.xsd"/>
+  <import namespace="http://www.id-sys.ru/schemas/idbank/ThirdPartyOrderService/2015/0.01/" schemaLocation="unifo_1_2_3_4_5.xsd"/>
+  <import namespace="http://www.id-sys.ru/schemas/idbank/cik/2017/0.01/" schemaLocation="unifo_1_2_3_4_5_6.xsd"/>
+  <simpleType name="DateTime">
+    <annotation>
+      <documentation>Дата и время</documentation>
+    </annotation>
+    <restriction base="xsd:dateTime">
+      <minInclusive value="1900-01-01T00:00:00"/>
+      <maxExclusive value="2100-01-01T00:00:00"/>
+    </restriction>
+  </simpleType>
+  <complexType name="DateTimeRange">
+    <annotation>
+      <documentation>Отрезок времени</documentation>
+    </annotation>
+    <attribute name="from" type="dateTime">
+      <annotation>
+        <documentation>Время начала</documentation>
+      </annotation>
+    </attribute>
+    <attribute name="to" type="dateTime">
+      <annotation>
+        <documentation>Время окончания</documentation>
+      </annotation>
+    </attribute>
+  </complexType>
+  <simpleType name="MessageID">
+    <annotation>
+      <documentation>Идентификатор сообщения iD Банк - ФССП</documentation>
+    </annotation>
+    <restriction base="xsd:token">
+      <minLength value="1"/>
+      <maxLength value="40"/>
+    </restriction>
+  </simpleType>
+  <complexType name="Message" abstract="true">
+    <annotation>
+      <documentation>Абстрактный тип сообщения веб-сервиса iD Банк-ФССП</documentation>
+    </annotation>
+    <sequence>
+      <element name="msgID" type="tns:MessageID" minOccurs="0" maxOccurs="1">
+        <annotation>
+          <documentation>ID запроса</documentation>
+        </annotation>
+      </element>
+      <element name="msgTimestamp" type="tns:DateTime" minOccurs="0" maxOccurs="1">
+        <annotation>
+          <documentation>Временная метка сообщения</documentation>
+        </annotation>
+      </element>
+      <element name="version" type="xsd:string" minOccurs="0" maxOccurs="1">
+        <annotation>
+          <documentation>Версия форматов информационного взаимодействия</documentation>
+        </annotation>
+      </element>
+      <element name="systemID" minOccurs="0">
+        <annotation>
+          <documentation>ID системы - источника сообщения</documentation>
+        </annotation>
+        <simpleType>
+          <restriction base="token">
+            <minLength value="1"/>
+            <maxLength value="40"/>
+          </restriction>
+        </simpleType>
+      </element>
+      <element name="dstSystemID" minOccurs="0">
+        <annotation>
+          <documentation>ID системы - получателя сообщения</documentation>
+        </annotation>
+        <simpleType>
+          <restriction base="token">
+            <minLength value="1"/>
+            <maxLength value="40"/>
+          </restriction>
+        </simpleType>
+      </element>
+      <element name="msgParameters" minOccurs="0">
+        <annotation>
+          <documentation>Параметры сообщения</documentation>
+        </annotation>
+        <complexType>
+          <sequence>
+            <element name="parameter" type="tns:Parameter" maxOccurs="unbounded"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="msgMode" type="token" minOccurs="0">
+        <annotation>
+          <documentation>Режим обработки сообщения</documentation>
+        </annotation>
+      </element>
+    </sequence>
+  </complexType>
+  <complexType name="Error">
+    <annotation>
+      <documentation>Сообщение об ошибке при выполнения операции</documentation>
+    </annotation>
+    <sequence>
+      <element name="message" type="xsd:string" minOccurs="0">
+        <annotation>
+          <documentation>Сообщение об ошибке</documentation>
+        </annotation>
+      </element>
+      <element name="code" type="xsd:string">
+        <annotation>
+          <documentation>Код ошибки</documentation>
+        </annotation>
+      </element>
+    </sequence>
+    <attribute name="objectID" type="token" use="optional">
+      <annotation>
+        <documentation>Идентификатор объекта</documentation>
+      </annotation>
+    </attribute>
+  </complexType>
+  <complexType name="Errors">
+    <annotation>
+      <documentation>Контейнер для сообщений об ошибках</documentation>
+    </annotation>
+    <sequence>
+      <element name="Error" type="tns:Error" maxOccurs="unbounded">
+        <annotation>
+          <documentation>Сообщение об ошибке</documentation>
+        </annotation>
+      </element>
+    </sequence>
+  </complexType>
+  <complexType name="CommonDataFilterItem">
+    <annotation>
+      <documentation>Элемент фильтра сведений</documentation>
+    </annotation>
+    <complexContent>
+      <extension base="tns:Object"/>
+    </complexContent>
+  </complexType>
+  <complexType name="ObjectStatus">
+    <annotation>
+      <documentation>Сведения о статусе объекта</documentation>
+    </annotation>
+    <sequence>
+      <element name="Errors" type="tns:Errors" minOccurs="0">
+        <annotation>
+          <documentation>Ошибки. Контейнер.</documentation>
+        </annotation>
+      </element>
+      <element name="Parameters" minOccurs="0">
+        <annotation>
+          <documentation>Параметры. Контейнер</documentation>
+        </annotation>
+        <complexType>
+          <sequence>
+            <element name="Parameter" type="tns:Parameter" maxOccurs="unbounded">
+              <annotation>
+                <documentation>Параметр</documentation>
+              </annotation>
+            </element>
+          </sequence>
+        </complexType>
+      </element>
+    </sequence>
+    <attribute name="objectID" type="token" use="required">
+      <annotation>
+        <documentation>Идентификатор объекта</documentation>
+      </annotation>
+    </attribute>
+    <attribute name="objectStatus" type="token" use="required">
+      <annotation>
+        <documentation>Статус объекта</documentation>
+      </annotation>
+    </attribute>
+    <attribute name="objectType" type="token" use="optional">
+      <annotation>
+        <documentation>Тип объекта</documentation>
+      </annotation>
+    </attribute>
+    <attribute name="ref" type="token" use="optional">
+      <annotation>
+        <documentation>Референс объекта</documentation>
+      </annotation>
+    </attribute>
+    <attribute name="statusName" type="string" use="optional">
+      <annotation>
+        <documentation>Наименование статуса объекта</documentation>
+      </annotation>
+    </attribute>
+    <attribute name="requestID" type="long" use="optional">
+      <annotation>
+        <documentation>ID документа, принятого от внешнего сервиса для асинхронного запроса</documentation>
+      </annotation>
+    </attribute>
+  </complexType>
+  <complexType name="Object" abstract="false">
+    <annotation>
+      <documentation>Объект</documentation>
+    </annotation>
+    <sequence>
+      <element name="Parameters" minOccurs="0">
+        <annotation>
+          <documentation>Параметры</documentation>
+        </annotation>
+        <complexType>
+          <sequence>
+            <element name="Parameter" type="tns:Parameter" maxOccurs="unbounded">
+              <annotation>
+                <documentation>Параметр</documentation>
+              </annotation>
+            </element>
+          </sequence>
+        </complexType>
+      </element>
+    </sequence>
+    <attribute name="ID" type="token" use="optional">
+      <annotation>
+        <documentation>Идентификатор объекта</documentation>
+      </annotation>
+    </attribute>
+    <attribute name="type" type="token" use="optional">
+      <annotation>
+        <documentation>Тип объекта</documentation>
+      </annotation>
+    </attribute>
+    <attribute name="name" type="string" use="optional">
+      <annotation>
+        <documentation>Наименование объекта</documentation>
+      </annotation>
+    </attribute>
+    <attribute name="ref" type="token" use="optional">
+      <annotation>
+        <documentation>Референс объекта</documentation>
+      </annotation>
+    </attribute>
+  </complexType>
+  <simpleType name="ProcessingMode">
+    <annotation>
+      <documentation>Режим обработки объекта</documentation>
+    </annotation>
+    <restriction base="int">
+      <enumeration value="0">
+        <annotation>
+          <documentation>Автоматический режим</documentation>
+        </annotation>
+      </enumeration>
+      <enumeration value="1">
+        <annotation>
+          <documentation>Ручной режим</documentation>
+        </annotation>
+      </enumeration>
+    </restriction>
+  </simpleType>
+  <complexType name="Event">
+    <annotation>
+      <documentation>Событие</documentation>
+    </annotation>
+    <complexContent>
+      <extension base="tns:Object">
+        <sequence>
+          <element name="Payload" minOccurs="0">
+            <annotation>
+              <documentation>Сушности, связанные с событием. Контейнер.</documentation>
+            </annotation>
+            <complexType>
+              <sequence>
+                <element name="Item" maxOccurs="unbounded">
+                  <annotation>
+                    <documentation>Сушность, связанная с событием. Контейнер.</documentation>
+                  </annotation>
+                  <complexType>
+                    <choice>
+                      <element name="Object" type="tns:Object">
+                        <annotation>
+                          <documentation>Объект, связанный с событием</documentation>
+                        </annotation>
+                      </element>
+                      <element name="Error" type="tns:Error">
+                        <annotation>
+                          <documentation>Ошибка, связанная с событием</documentation>
+                        </annotation>
+                      </element>
+                    </choice>
+                  </complexType>
+                </element>
+              </sequence>
+            </complexType>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="Parameter">
+    <annotation>
+      <documentation>Параметр</documentation>
+    </annotation>
+    <sequence>
+      <element name="name">
+        <annotation>
+          <documentation>Наименование параметра</documentation>
+        </annotation>
+        <simpleType>
+          <restriction base="token">
+            <minLength value="1"/>
+          </restriction>
+        </simpleType>
+      </element>
+      <element name="value" type="string">
+        <annotation>
+          <documentation>Значение параметра</documentation>
+        </annotation>
+      </element>
+    </sequence>
+  </complexType>
+  <complexType name="FioType">
+    <annotation>
+      <documentation>Фамилия, имя, отчество</documentation>
+    </annotation>
+    <sequence>
+      <element name="Surname">
+        <annotation>
+          <documentation>Фамилия</documentation>
+        </annotation>
+        <simpleType>
+          <restriction base="string">
+            <minLength value="1"/>
+            <maxLength value="60"/>
+          </restriction>
+        </simpleType>
+      </element>
+      <element name="FirstName">
+        <annotation>
+          <documentation>Имя</documentation>
+        </annotation>
+        <simpleType>
+          <restriction base="string">
+            <minLength value="1"/>
+            <maxLength value="60"/>
+          </restriction>
+        </simpleType>
+      </element>
+      <element name="Patronymic" minOccurs="0">
+        <annotation>
+          <documentation>Отчество</documentation>
+        </annotation>
+        <simpleType>
+          <restriction base="string">
+            <minLength value="1"/>
+            <maxLength value="60"/>
+          </restriction>
+        </simpleType>
+      </element>
+    </sequence>
+  </complexType>
+  <simpleType name="Money">
+    <annotation>
+      <documentation>Денежный</documentation>
+    </annotation>
+    <restriction base="xsd:decimal">
+      <totalDigits value="15"/>
+      <fractionDigits value="2"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="CommonDocType">
+    <restriction base="string">
+      <enumeration value="RegistrationCertificate"/>
+      <enumeration value="RegistrationReject"/>
+      <enumeration value="Персона"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="DocType">
+    <restriction base="string">
+      <enumeration value="RegistrationCertificate"/>
+      <enumeration value="RegistrationReject"/>
+      <enumeration value="Персона"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="ModuleType">
+    <annotation>
+      <documentation>Тип модуля</documentation>
+    </annotation>
+    <restriction base="string">
+      <enumeration value="Notary"/>
+    </restriction>
+  </simpleType>
+  <complexType name="IdentificationEx">
+    <annotation>
+      <documentation>ДУЛ</documentation>
+    </annotation>
+    <sequence>
+      <element name="latinLastName" minOccurs="0">
+        <annotation>
+          <documentation>Фамилия (латиницей)</documentation>
+        </annotation>
+        <simpleType>
+          <restriction base="string">
+            <minLength value="1"/>
+            <maxLength value="100"/>
+          </restriction>
+        </simpleType>
+      </element>
+      <element name="latinFirstName" minOccurs="0">
+        <annotation>
+          <documentation>Имя (латиницей)</documentation>
+        </annotation>
+        <simpleType>
+          <restriction base="string">
+            <minLength value="1"/>
+            <maxLength value="100"/>
+          </restriction>
+        </simpleType>
+      </element>
+      <element name="Series" minOccurs="0">
+        <annotation>
+          <documentation>Серия ДУЛ</documentation>
+        </annotation>
+        <simpleType>
+          <restriction base="string">
+            <minLength value="1"/>
+            <maxLength value="25"/>
+          </restriction>
+        </simpleType>
+      </element>
+      <element name="Number">
+        <annotation>
+          <documentation>Номер ДУЛ</documentation>
+        </annotation>
+        <simpleType>
+          <restriction base="string">
+            <minLength value="1"/>
+            <maxLength value="25"/>
+          </restriction>
+        </simpleType>
+      </element>
+      <element name="DeptCode" minOccurs="0">
+        <annotation>
+          <documentation>Код подразделения</documentation>
+        </annotation>
+        <simpleType>
+          <restriction base="string">
+            <minLength value="1"/>
+            <maxLength value="25"/>
+          </restriction>
+        </simpleType>
+      </element>
+      <element name="Issued" type="date" minOccurs="0">
+        <annotation>
+          <documentation>Дата выдачи</documentation>
+        </annotation>
+      </element>
+      <element name="IssuedBy" type="string" minOccurs="0">
+        <annotation>
+          <documentation>Кем выдан</documentation>
+        </annotation>
+      </element>
+      <element name="Issuer" type="string" minOccurs="0">
+        <annotation>
+          <documentation>Кем выдан</documentation>
+        </annotation>
+      </element>
+      <element name="ValidBefore" type="date" minOccurs="0">
+        <annotation>
+          <documentation>Дата окончания срока действия</documentation>
+        </annotation>
+      </element>
+    </sequence>
+    <attribute name="type" type="string" use="required">
+      <annotation>
+        <documentation>Тип ДУЛ</documentation>
+      </annotation>
+    </attribute>
+    <attribute name="name" type="string">
+      <annotation>
+        <documentation>Наименование типа ДУЛ</documentation>
+      </annotation>
+    </attribute>
+  </complexType>
+  <complexType name="Request">
+    <annotation>
+      <documentation>Запрос</documentation>
+    </annotation>
+    <complexContent>
+      <extension base="tns:Message">
+        <sequence>
+          <element name="requestID" type="token" minOccurs="0">
+            <annotation>
+              <documentation>ID запроса</documentation>
+            </annotation>
+          </element>
+          <element name="requestType" type="token" minOccurs="0">
+            <annotation>
+              <documentation>Тип запроса</documentation>
+            </annotation>
+          </element>
+          <element name="requestMode" type="token" minOccurs="0">
+            <annotation>
+              <documentation>Режим запроса</documentation>
+            </annotation>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="Response">
+    <annotation>
+      <documentation>Ответ</documentation>
+    </annotation>
+    <complexContent>
+      <extension base="tns:Message">
+        <sequence>
+          <element name="requestID" type="token" minOccurs="0">
+            <annotation>
+              <documentation>ID запроса</documentation>
+            </annotation>
+          </element>
+          <element name="requestType" type="token" minOccurs="0">
+            <annotation>
+              <documentation>Тип запроса</documentation>
+            </annotation>
+          </element>
+          <element name="requestMode" type="token" minOccurs="0">
+            <annotation>
+              <documentation>Режим запроса</documentation>
+            </annotation>
+          </element>
+          <element name="requestStatus" type="token" minOccurs="0">
+            <annotation>
+              <documentation>Статус обработки запроса</documentation>
+            </annotation>
+          </element>
+          <element name="Errors" type="tns:Errors" minOccurs="0">
+            <annotation>
+              <documentation>Сообщения об ошибках</documentation>
+            </annotation>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="CommonDocument">
+    <annotation>
+      <documentation>Документ</documentation>
+    </annotation>
+    <complexContent>
+      <extension base="tns:Object">
+        <choice>
+          <element name="PledgeNotification" type="ns2:PledgeNotificationSigned">
+            <annotation>
+              <documentation>Уведомление о залоге движимого имущества</documentation>
+            </annotation>
+          </element>
+          <element name="RegistrationCertificate" type="ns2:RegistrationCertificateSigned">
+            <annotation>
+              <documentation>Свидетельство о регистрации уведомления</documentation>
+            </annotation>
+          </element>
+          <element name="Register" type="esia:AuthorityRequest">
+            <annotation>
+              <documentation>Запрос регистрации учетной записи пользователя в ЕСИА</documentation>
+            </annotation>
+          </element>
+          <element name="Recover" type="esia:AuthorityRequest">
+            <annotation>
+              <documentation>Запрос восстановления доступа к учётной записи пользователя в ЕСИА</documentation>
+            </annotation>
+          </element>
+          <element name="DeleteEsiaAcc" type="esia:AuthorityRequest">
+            <annotation>
+              <documentation>Запрос удаление учётной записи пользователя в ЕСИА</documentation>
+            </annotation>
+          </element>
+          <element name="Confirm" type="esia:AuthorityRequest">
+            <annotation>
+              <documentation>Запрос подтверждения личности гражданина в ЕСИА</documentation>
+            </annotation>
+          </element>
+          <element name="GosServ" type="os:GosServ">
+            <annotation>
+              <documentation>Запрос ГосУслуги</documentation>
+            </annotation>
+          </element>
+          <element name="GosLimit" type="os:GosLimit">
+            <annotation>
+              <documentation>Запрос лимитов</documentation>
+            </annotation>
+          </element>
+          <element name="RegisterNBP" type="esia:RegisterNBPType">
+            <annotation>
+              <documentation>Пакет запросов регистрации в ЕБС</documentation>
+            </annotation>
+          </element>
+          <element name="Персона" type="cik:Персона">
+            <annotation>
+              <documentation>Запрос ЦИК</documentation>
+            </annotation>
+          </element>
+          <element name="RegisterBySimplified" type="esia:AuthorityRequest">
+            <annotation>
+              <documentation>Запрос подтверждения учётной записи в ЕСИА, созданной на основе существующей упрощённой</documentation>
+            </annotation>
+          </element>
+          <element name="PFR_ILS" type="tns:PFR_ILS">
+            <annotation>
+              <documentation>Сведения о состоянии ИЛС</documentation>
+            </annotation>
+          </element>
+        </choice>
+        <attribute name="customerID" type="token" use="optional">
+          <annotation>
+            <documentation>Идентификатор клиента</documentation>
+          </annotation>
+        </attribute>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="ContactInfo">
+    <annotation>
+      <documentation>Контактная информация</documentation>
+    </annotation>
+    <sequence>
+      <element name="email" type="string" minOccurs="0">
+        <annotation>
+          <documentation>Адрес электронной почты</documentation>
+        </annotation>
+      </element>
+      <element name="mobile" type="string" minOccurs="0">
+        <annotation>
+          <documentation>Номер мобильного телефона</documentation>
+        </annotation>
+      </element>
+    </sequence>
+  </complexType>
+  <complexType name="OMSEx">
+    <annotation>
+      <documentation>Информация о полисе ФОМС</documentation>
+    </annotation>
+    <simpleContent>
+      <extension base="string">
+        <attribute name="type" type="string" use="required">
+          <annotation>
+            <documentation>Тип полиса ФОМС</documentation>
+          </annotation>
+        </attribute>
+      </extension>
+    </simpleContent>
+  </complexType>
+  <complexType name="PFR_ILS">
+    <annotation>
+      <documentation>Сведения о состоянии ИЛС</documentation>
+    </annotation>
+    <sequence>
+      <element name="IlsFile" type="tns:BinaryResult" maxOccurs="2">
+        <annotation>
+          <documentation>Файл со сведениями о состоянии ИЛС</documentation>
+        </annotation>
+      </element>
+    </sequence>
+  </complexType>
+  <complexType name="BinaryResult">
+    <annotation>
+      <documentation>Ответ в двоичном формате</documentation>
+    </annotation>
+    <sequence>
+      <element name="BinaryFile" type="base64Binary">
+        <annotation>
+          <documentation>Файл ответа</documentation>
+        </annotation>
+      </element>
+    </sequence>
+    <attribute name="type" type="string" use="optional">
+      <annotation>
+        <documentation>Тип файла</documentation>
+      </annotation>
+    </attribute>
+  </complexType>
+</schema>

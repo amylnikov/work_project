@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is unknown.-->
+<wsdl:definitions name="idbank_unifo" targetNamespace="http://www.id-sys.ru/schemas/idbank/unifo/2012/1.15/" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:ns="http://roskazna.ru/xsd/Bill" xmlns:ns1="http://roskazna.ru/xsd/BudgetIndex" xmlns:ns10="http://roskazna.ru/xsd/PostBlock" xmlns:ns11="http://roskazna.ru/xsd/RequestTemplate" xmlns:ns12="http://roskazna.ru/xsd/ResponseTemplate" xmlns:ns13="http://roskazna.ru/xsd/Ticket" xmlns:ns14="http://www.id-sys.ru/schemas/idbank/common/2012/0.01/" xmlns:ns15="http://www.w3.org/2000/09/xmldsig#" xmlns:ns2="http://roskazna.ru/xsd/Charge" xmlns:ns3="http://roskazna.ru/xsd/Common" xmlns:ns4="http://roskazna.ru/xsd/ErrInfo" xmlns:ns5="http://roskazna.ru/xsd/Organization" xmlns:ns6="http://roskazna.ru/xsd/PGU_ChargesResponse" xmlns:ns7="http://roskazna.ru/xsd/PGU_DataRequest" xmlns:ns8="http://roskazna.ru/xsd/PGU_ImportRequest" xmlns:ns9="http://roskazna.ru/xsd/PaymentInfo" xmlns:sc="http://schemas.sun.com/2006/03/wss/server" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702" xmlns:tns="http://www.id-sys.ru/schemas/idbank/unifo/2012/1.15/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wspp="http://java.sun.com/xml/ns/wsit/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.id-sys.ru/schemas/idbank/unifo/2012/1.15/" xmlns:id="http://www.id-sys.ru/schemas/idbank/common/2012/0.01/">
+      <xsd:include schemaLocation="unifo_1_2_3_4_5_6_7.xsd"/>
+      <xsd:import namespace="http://www.id-sys.ru/schemas/idbank/common/2012/0.01/" schemaLocation="unifo.xsd"/>
+
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="GetChargesRq">
+    <wsdl:part element="tns:GetChargesRq" name="request"/>
+  </wsdl:message>
+  <wsdl:message name="GetChargesRs">
+    <wsdl:part element="tns:GetChargesRs" name="response"/>
+  </wsdl:message>
+  <wsdl:message name="GetChargesErr">
+    <wsdl:part element="tns:Error" name="detail"/>
+  </wsdl:message>
+  <wsdl:message name="PutPaymentRq">
+    <wsdl:part element="tns:PutPaymentRq" name="request"/>
+  </wsdl:message>
+  <wsdl:message name="PutPaymentRs">
+    <wsdl:part element="tns:PutPaymentRs" name="response"/>
+  </wsdl:message>
+  <wsdl:message name="PutPaymentErr">
+    <wsdl:part element="tns:Error" name="detail"/>
+  </wsdl:message>
+  <wsdl:message name="PutRefPaymentsRq">
+    <wsdl:part element="tns:PutRefPaymentsRq" name="request"/>
+  </wsdl:message>
+  <wsdl:message name="PutRefPaymentsRs">
+    <wsdl:part element="tns:PutRefPaymentsRs" name="response"/>
+  </wsdl:message>
+  <wsdl:message name="PutRefPaymentsErr">
+    <wsdl:part element="tns:Error" name="detail"/>
+  </wsdl:message>
+  <wsdl:message name="GetCatalogRq">
+    <wsdl:part element="tns:GetCatalogRq" name="request"/>
+  </wsdl:message>
+  <wsdl:message name="GetCatalogRs">
+    <wsdl:part element="tns:GetCatalogRs" name="response"/>
+  </wsdl:message>
+  <wsdl:message name="GetCatalogErr">
+    <wsdl:part element="tns:Error" name="detail"/>
+  </wsdl:message>
+  <wsdl:message name="PutPayDocsRq">
+    <wsdl:part element="tns:PutPayDocsRq" name="request"/>
+  </wsdl:message>
+  <wsdl:message name="PutPayDocsRs">
+    <wsdl:part element="tns:PutPayDocsRs" name="response"/>
+  </wsdl:message>
+  <wsdl:message name="PutPayDocsErr">
+    <wsdl:part element="tns:Error" name="detail"/>
+  </wsdl:message>
+  <wsdl:message name="AuthPaymentRq">
+    <wsdl:part element="tns:AuthPaymentRq" name="request"/>
+  </wsdl:message>
+  <wsdl:message name="AuthPaymentRs">
+    <wsdl:part element="tns:AuthPaymentRs" name="response"/>
+  </wsdl:message>
+  <wsdl:message name="AuthPaymentErr">
+    <wsdl:part element="tns:Error" name="detail"/>
+  </wsdl:message>
+  <wsdl:portType name="IDBankUnifoPortType">
+    <wsdl:operation name="GetCharges">
+      <wsdl:documentation>Запрос из ГИС ГМП начислений через систему iDБанк</wsdl:documentation>
+      <wsdl:input message="tns:GetChargesRq"/>
+      <wsdl:output message="tns:GetChargesRs"/>
+      <wsdl:fault message="tns:GetChargesErr" name="Error"/>
+    </wsdl:operation>
+    <wsdl:operation name="PutPayment">
+      <wsdl:documentation>Отправка в ГИС ГМП платежей через систему iDБанк</wsdl:documentation>
+      <wsdl:input message="tns:PutPaymentRq"/>
+      <wsdl:output message="tns:PutPaymentRs"/>
+      <wsdl:fault message="tns:PutPaymentErr" name="Error"/>
+    </wsdl:operation>
+    <operation name="PutRefPayments">
+      <documentation>Загрузка контрольного массива платежей для сверки в систему iDБанк</documentation>
+      <input message="tns:PutRefPaymentsRq"/>
+      <output message="tns:PutRefPaymentsRs"/>
+      <fault message="tns:PutRefPaymentsErr" name="Error"/>
+    </operation>
+    <wsdl:operation name="GetCatalog">
+      <wsdl:documentation>Запрос на получение каталога услуг из ИС РНИП</wsdl:documentation>
+      <wsdl:input message="tns:GetCatalogRq"/>
+      <wsdl:output message="tns:GetCatalogRs"/>
+      <wsdl:fault message="tns:GetCatalogErr" name="Error"/>
+    </wsdl:operation>
+    <operation name="PutPayDocs">
+      <documentation>Запрос на регистрацию расчетных документов</documentation>
+      <input message="tns:PutPayDocsRq"/>
+      <output message="tns:PutPayDocsRs"/>
+      <fault message="tns:PutPayDocsErr" name="Error"/>
+    </operation>
+    <operation name="AuthPayment">
+      <documentation>Запрос на авторизацию платежа</documentation>
+      <input message="tns:AuthPaymentRq"/>
+      <output message="tns:AuthPaymentRs"/>
+      <fault message="tns:AuthPaymentErr" name="Error"/>
+    </operation>
+  </wsdl:portType>
+  <wsdl:binding name="IDBankUnifoSOAP" type="tns:IDBankUnifoPortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsp:PolicyReference URI="#SecurityPolicy"/>
+    <wsdl:operation name="GetCharges">
+      <soap:operation soapAction="http://www.id-sys.ru/schemas/idbank/unifo/2012/1.15/GetCharges"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Error">
+        <soap:fault name="Error" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="PutPayment">
+      <soap:operation soapAction="http://www.id-sys.ru/schemas/idbank/unifo/2012/1.15/PutPayment"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Error">
+        <soap:fault name="Error" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <operation name="PutRefPayments">
+      <soap:operation soapAction="http://www.id-sys.ru/schemas/idbank/unifo/2012/1.15/PutRefPayments"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <wsdl:fault name="Error">
+        <soap:fault name="Error" use="literal"/>
+      </wsdl:fault>
+    </operation>
+    <wsdl:operation name="GetCatalog">
+      <soap:operation soapAction="http://www.id-sys.ru/schemas/idbank/unifo/2012/1.15/GetCatalog"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Error">
+        <soap:fault name="Error" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="PutPayDocs">
+      <soap:operation soapAction="http://www.id-sys.ru/schemas/idbank/unifo/2012/1.15/PutPayDocs"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Error">
+        <soap:fault name="Error" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AuthPayment">
+      <soap:operation soapAction="http://www.id-sys.ru/schemas/idbank/unifo/2012/1.15/AuthPayment"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Error">
+        <soap:fault name="Error" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="IDBankUnifoService">
+    <wsdl:port binding="tns:IDBankUnifoSOAP" name="IDBankUnifoPort">
+      <soap:address location="http://192.168.1.212:8080/bank_client/service/unifo"/>
+    </wsdl:port>
+  </wsdl:service>
+  <xsd:annotation>
+    <xsd:documentation>Веб-сервис системы ID Банк для взаимодействия с ГИС ГМП</xsd:documentation>
+  </xsd:annotation>
+  <wsp:Policy wsu:Id="SecurityPolicy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SupportingTokens>
+          <wsp:Policy>
+            <sp:UsernameToken sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient">
+              <wsp:Policy>
+                <sp:WssUsernameToken10/>
+              </wsp:Policy>
+            </sp:UsernameToken>
+          </wsp:Policy>
+        </sp:SupportingTokens>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <!--TYPES-->
+  <!--Messages-->
+  <!--portType-->
+</wsdl:definitions>

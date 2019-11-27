@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is unknown.--><xsd:schema targetNamespace="http://roskazna.ru/xsd/Ticket" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:rst="http://roskazna.ru/xsd/ResponseTemplate" xmlns:ticket="http://roskazna.ru/xsd/Ticket">
+  <xsd:import namespace="http://www.w3.org/2000/09/xmldsig#" schemaLocation="unifo_1_2_3_4_5_6_7_8_9_10_11.xsd"/>
+  <xsd:import namespace="http://roskazna.ru/xsd/ResponseTemplate" schemaLocation="unifo_1_2_3_4_5_6_7_8_9_10_11_12_13_14_15_16_17_18_19_20_21.xsd"/>
+  <xsd:complexType name="Ticket">
+    <xsd:annotation>
+      <xsd:documentation>Техническая квитанция</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="rst:ResponseTemplate">
+        <xsd:sequence minOccurs="0">
+          <xsd:element ref="ds:Signature" minOccurs="0"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Ticket" type="ticket:Ticket"/>
+</xsd:schema>

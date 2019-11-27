@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is unknown.--><!--edited with XMLSpy v2013 (http://www.altova.com) by  ()--><schema targetNamespace="http://www.id-sys.ru/schemas/idbank/unifo/2012/1.15/" elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:tns="http://www.id-sys.ru/schemas/idbank/unifo/2012/1.15/" xmlns:id="http://www.id-sys.ru/schemas/idbank/common/2012/0.01/" xmlns:ticket="http://roskazna.ru/xsd/Ticket" xmlns:pdrq="http://roskazna.ru/xsd/PGU_DataRequest" xmlns:pirq="http://roskazna.ru/xsd/PGU_ImportRequest" xmlns:pcrs="http://roskazna.ru/xsd/PGU_ChargesResponse" xmlns:pi="http://roskazna.ru/xsd/PaymentInfo" xmlns:cat="http://www.bssys.com/xsd/Catalog">
+  <import namespace="http://roskazna.ru/xsd/PGU_ImportRequest" schemaLocation="unifo_1_2_3_4_5_6_7_8.xsd"/>
+  <import namespace="http://roskazna.ru/xsd/PGU_DataRequest" schemaLocation="unifo_1_2_3_4_5_6_7_8_9_10_11_12_13_14_15_16_17_18.xsd"/>
+  <import namespace="http://roskazna.ru/xsd/PGU_ChargesResponse" schemaLocation="unifo_1_2_3_4_5_6_7_8_9_10_11_12_13_14_15_16_17_18_19_20.xsd"/>
+  <import namespace="http://roskazna.ru/xsd/Ticket" schemaLocation="unifo_1_2_3_4_5_6_7_8_9_10_11_12_13_14_15_16_17_18_19_20_21_22_23.xsd"/>
+  <import namespace="http://www.id-sys.ru/schemas/idbank/common/2012/0.01/" schemaLocation="unifo.xsd"/>
+  <include schemaLocation="unifo_1_2_3_4_5_6_7_8_9_10_11_12_13_14_15_16_17_18_19_20_21_22_23_24.xsd"/>
+  <import namespace="http://roskazna.ru/xsd/PaymentInfo" schemaLocation="unifo_1_2_3_4_5_6_7_8_9_10_11_12_13_14_15_16.xsd"/>
+  <import namespace="http://www.bssys.com/xsd/Catalog" schemaLocation="unifo_1_2_3_4_5_6_7_8_9_10_11_12_13_14_15_16_17.xsd"/>
+  <xsd:element name="GetChargesRq" type="tns:GetChargesRq"/>
+  <xsd:element name="GetChargesRs" type="tns:GetChargesRs"/>
+  <xsd:element name="PutPaymentRq" type="tns:PutPaymentRq"/>
+  <xsd:element name="PutPaymentRs" type="tns:PutPaymentRs"/>
+  <xsd:element name="PutRefPaymentsRq" type="tns:PutRefPaymentsRq"/>
+  <xsd:element name="PutRefPaymentsRs" type="tns:PutRefPaymentsRs"/>
+  <xsd:element name="GetCatalogRq" type="tns:GetCatalogRq"/>
+  <xsd:element name="GetCatalogRs" type="tns:GetCatalogRs"/>
+  <xsd:element name="PutPayDocsRq" type="tns:PutPayDocsRq"/>
+  <xsd:element name="PutPayDocsRs" type="tns:PutPayDocsRs"/>
+  <xsd:element name="AuthPaymentRq" type="tns:AuthPaymentRq"/>
+  <xsd:element name="AuthPaymentRs" type="tns:AuthPaymentRs"/>
+  <xsd:element name="Error" type="id:Error"/>
+  <complexType name="GetChargesRq">
+    <annotation>
+      <documentation>Запрос на получение начислений из ГИС ГМП</documentation>
+    </annotation>
+    <complexContent>
+      <extension base="id:Message">
+        <sequence>
+          <element name="ChargesMode" minOccurs="0">
+            <annotation>
+              <documentation>Режим предоставления информации о начислениях
+								1 - исходный файл начислений (ChargeData) + ЭП файла
+								(ChargeSignature)
+								2 - раскодированные начисления из файла (Charge)</documentation>
+            </annotation>
+            <simpleType>
+              <restriction base="xsd:string">
+                <length value="1"/>
+                <enumeration value="1"/>
+                <enumeration value="2"/>
+              </restriction>
+            </simpleType>
+          </element>
+          <element name="DataRequest" type="pdrq:DataRequest">
+            <annotation>
+              <documentation>Оригинальный "Запрос на экспорт начислений из
+								ГИС ГМП"</documentation>
+            </annotation>
+          </element>
+          <element name="Paging" minOccurs="0">
+            <annotation>
+              <documentation>Параметры постраничной выдачи</documentation>
+            </annotation>
+            <complexType>
+              <attribute name="pageNumber" use="required">
+                <annotation>
+                  <documentation>Номер страницы выдачи.</documentation>
+                </annotation>
+                <simpleType>
+                  <restriction base="int">
+                    <minInclusive value="1"/>
+                  </restriction>
+                </simpleType>
+              </attribute>
+              <attribute name="pageLength" use="required">
+                <annotation>
+                  <documentation>Количество элементов на странице выдачи.</documentation>
+                </annotation>
+                <simpleType>
+                  <restriction base="int">
+                    <minInclusive value="1"/>
+                  </restriction>
+                </simpleType>
+              </attribute>
+            </complexType>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="GetChargesRs">
+    <annotation>
+      <documentation>Ответ на запрос на получение начислений из ГИС ГМП</documentation>
+    </annotation>
+    <complexContent>
+      <extension base="id:Message">
+        <sequence>
+          <element name="ExportChargesResponse" type="tns:ExportChargesResponseEx" minOccurs="0">
+            <annotation>
+              <documentation>Модифицированный "Ответ на запрос на экспорт
+								начислений из
+								ГИС ГМП"</documentation>
+            </annotation>
+          </element>
+          <element name="Errors" type="id:Errors" minOccurs="0">
+            <annotation>
+              <documentation>Ошибки, возникшие при обработке ответа на запрос.</documentation>
+            </annotation>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="PutPaymentRq">
+    <annotation>
+      <documentation>Запрос на отправку платежей в ГИС ГМП</documentation>
+    </annotation>
+    <complexContent>
+      <extension base="id:Message">
+        <sequence>
+          <element name="ImportRequest" type="pirq:ImportRequest">
+            <annotation>
+              <documentation>Оригинальный "Запрос на импорт платежей в
+								ГИС ГМП"</documentation>
+            </annotation>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="PutPaymentRs">
+    <annotation>
+      <documentation>Ответ на запрос на отправку платежей в ГИС ГМП</documentation>
+    </annotation>
+    <complexContent>
+      <extension base="id:Message">
+        <sequence>
+          <element name="Ticket" type="ticket:Ticket" minOccurs="0">
+            <annotation>
+              <documentation>Оригинальный "Ответ на запрос на импорт платежей в
+								ГИС ГМП"</documentation>
+            </annotation>
+          </element>
+          <element name="Errors" type="id:Errors" minOccurs="0">
+            <annotation>
+              <documentation>Ошибки, возникшие при обработке ответа на запрос.</documentation>
+            </annotation>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="PutRefPaymentsRq">
+    <annotation>
+      <documentation>Запрос на загрузку контрольного массива платежей для сверки в iDБанк</documentation>
+    </annotation>
+    <complexContent>
+      <extension base="id:Message">
+        <sequence>
+          <element name="TransactionDay" type="date">
+            <annotation>
+              <documentation>Операционный день</documentation>
+            </annotation>
+          </element>
+          <element name="HaveMore" type="boolean" default="false" minOccurs="0">
+            <annotation>
+              <documentation>Признак того, что данный запрос содержит только часть платежей</documentation>
+            </annotation>
+          </element>
+          <element name="RefPayments">
+            <annotation>
+              <documentation>Контейнер платежей для сверки</documentation>
+            </annotation>
+            <complexType>
+              <sequence>
+                <element name="RefPayment" maxOccurs="unbounded">
+                  <annotation>
+                    <documentation>Платеж для сверки</documentation>
+                  </annotation>
+                  <complexType>
+                    <sequence>
+                      <element name="FinalPayment" type="pi:PaymentInfoType" minOccurs="0"/>
+                    </sequence>
+                    <attribute name="SystemIdentifier" use="required">
+                      <simpleType>
+                        <restriction base="string">
+                          <minLength value="0"/>
+                          <maxLength value="36"/>
+                        </restriction>
+                      </simpleType>
+                    </attribute>
+                  </complexType>
+                </element>
+              </sequence>
+            </complexType>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="PutRefPaymentsRs">
+    <annotation>
+      <documentation>Ответ на запрос на загрузку контрольного массива платежей для сверки в iDБанк</documentation>
+    </annotation>
+    <complexContent>
+      <extension base="id:Message">
+        <sequence>
+          <element name="Result">
+            <annotation>
+              <documentation>Результат обработки запроса</documentation>
+            </annotation>
+            <simpleType>
+              <restriction base="string">
+                <enumeration value="OK"/>
+                <enumeration value="FAIL"/>
+              </restriction>
+            </simpleType>
+          </element>
+          <element name="Errors" type="id:Errors" minOccurs="0">
+            <annotation>
+              <documentation>Контейнер сообщений об ошибке</documentation>
+            </annotation>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="GetCatalogRq">
+    <annotation>
+      <documentation>Запрос на получение каталога услуг из ИС РНИП</documentation>
+    </annotation>
+    <complexContent>
+      <extension base="id:Message">
+        <sequence>
+          <element name="DataRequest" type="pdrq:DataRequest">
+            <annotation>
+              <documentation>Оригинальный "Запрос на экспорт Каталога услуг поставщика"</documentation>
+            </annotation>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="GetCatalogRs">
+    <annotation>
+      <documentation>Ответ на запрос на получение каталога услуг из ИС РНИП</documentation>
+    </annotation>
+    <complexContent>
+      <extension base="id:Message">
+        <sequence>
+          <element name="Catalog" minOccurs="0">
+            <annotation>
+              <documentation>Каталог услуг поставщика</documentation>
+            </annotation>
+            <complexType>
+              <choice>
+                <element name="BinaryData" type="base64Binary"/>
+                <element name="Service" type="cat:Service_Type" maxOccurs="unbounded"/>
+              </choice>
+            </complexType>
+          </element>
+          <element name="Errors" type="id:Errors" minOccurs="0">
+            <annotation>
+              <documentation>Ошибки, возникшие при обработке ответа на запрос.</documentation>
+            </annotation>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="PutPayDocsRq">
+    <annotation>
+      <documentation>Запрос на регистрацию расчетных документов</documentation>
+    </annotation>
+    <complexContent>
+      <extension base="id:Message">
+        <sequence>
+          <element name="Document" maxOccurs="unbounded">
+            <annotation>
+              <documentation>Контейнер расчетного документа</documentation>
+            </annotation>
+            <complexType>
+              <sequence>
+                <element name="AccDoc" minOccurs="0">
+                  <annotation>
+                    <documentation>Расчетный документ</documentation>
+                  </annotation>
+                  <complexType>
+                    <complexContent>
+                      <extension base="tns:AccDoc"/>
+                    </complexContent>
+                  </complexType>
+                </element>
+              </sequence>
+              <attribute name="DocAction">
+                <annotation>
+                  <documentation>Действие с документом.
+0 - добавление
+1 - корректировка
+2 - удаление</documentation>
+                </annotation>
+                <simpleType>
+                  <restriction base="int">
+                    <enumeration value="0"/>
+                    <enumeration value="1"/>
+                    <enumeration value="2"/>
+                  </restriction>
+                </simpleType>
+              </attribute>
+              <attribute name="DocRef">
+                <annotation>
+                  <documentation>Референс документа</documentation>
+                </annotation>
+                <simpleType>
+                  <restriction base="token">
+                    <minLength value="1"/>
+                    <maxLength value="100"/>
+                  </restriction>
+                </simpleType>
+              </attribute>
+            </complexType>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="PutPayDocsRs">
+    <annotation>
+      <documentation>Ответ на запрос на регистрацию расчетных документов</documentation>
+    </annotation>
+    <complexContent>
+      <extension base="id:Message">
+        <sequence>
+          <element name="Result">
+            <annotation>
+              <documentation>Результат обработки запроса</documentation>
+            </annotation>
+            <simpleType>
+              <restriction base="string">
+                <enumeration value="OK"/>
+                <enumeration value="FAIL"/>
+              </restriction>
+            </simpleType>
+          </element>
+          <element name="Errors" type="id:Errors" minOccurs="0">
+            <annotation>
+              <documentation>Контейнер сообщений об ошибке</documentation>
+            </annotation>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="AuthPaymentRq">
+    <annotation>
+      <documentation>Запрос на авторизацию платежа</documentation>
+    </annotation>
+    <complexContent>
+      <extension base="id:Message">
+        <sequence>
+          <element name="Payment" maxOccurs="unbounded">
+            <annotation>
+              <documentation>Платеж</documentation>
+            </annotation>
+            <complexType>
+              <complexContent>
+                <extension base="id:Object">
+                  <sequence>
+                    <element name="Payee" minOccurs="0">
+                      <annotation>
+                        <documentation>Получатель платежа</documentation>
+                      </annotation>
+                      <complexType>
+                        <attribute name="INN">
+                          <annotation>
+                            <documentation>ИНН</documentation>
+                          </annotation>
+                          <simpleType>
+                            <restriction base="string">
+                              <maxLength value="12"/>
+                            </restriction>
+                          </simpleType>
+                        </attribute>
+                        <attribute name="KPP" type="string">
+                          <annotation>
+                            <documentation>КПП</documentation>
+                          </annotation>
+                        </attribute>
+                      </complexType>
+                    </element>
+                  </sequence>
+                </extension>
+              </complexContent>
+            </complexType>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="AuthPaymentRs">
+    <annotation>
+      <documentation>Ответ на запрос на авторизацию платежа</documentation>
+    </annotation>
+    <complexContent>
+      <extension base="id:Message">
+        <sequence>
+          <element name="ProcessingResult" type="id:ObjectStatus" maxOccurs="unbounded">
+            <annotation>
+              <documentation>Результат авторизации</documentation>
+            </annotation>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+</schema>

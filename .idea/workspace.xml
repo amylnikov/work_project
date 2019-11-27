@@ -1,0 +1,1197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="179d9e54-cc3d-4d8b-a059-c8c6cde1bc39" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/.gradle/" />
+    <ignored path="$PROJECT_DIR$/build/" />
+    <ignored path="$PROJECT_DIR$/gisgmp/.gradle/" />
+    <ignored path="$PROJECT_DIR$/gisgmp/build/" />
+    <ignored path="$PROJECT_DIR$/gisgmp/out/" />
+    <ignored path="$PROJECT_DIR$/fns/.gradle/" />
+    <ignored path="$PROJECT_DIR$/fns/build/" />
+    <ignored path="$PROJECT_DIR$/fns/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/id_bank_autotests$FilterPanelChkTests.ic" NAME="FilterPanelChkTests Coverage Results" MODIFIED="1574153111977" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ru.idsys.idbank.fns.innflchk.tests.UI.*</FILTER>
+    </SUITE>
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="221" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$/fns">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/gisgmp">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="gisgmp" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="id_bank_autotests" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="id_bank_autotests" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fns/src/test/java/ru/idsys/idbank/fns/innflchk/tests/UI/FilterPanelChkTests.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="519">
+              <caret line="295" selection-start-line="274" selection-end-line="295" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/fns/src/test/java/ru/idsys/idbank/fns/innflchk/tests/UI/ScrollerCntxtMenuChkTests.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="739">
+              <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>build</find>
+      <find>InnFLRqData</find>
+      <find>println</find>
+      <find>clear</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/gisgmp/src/test/java/ru/idsys/idbank/gisgmp/UI/tests/ExportChargesFiltersAndContextMenuCheckTests.java" />
+        <option value="$PROJECT_DIR$/gisgmp/src/test/java/ru/idsys/idbank/gisgmp/UI/model/ChargesData.java" />
+        <option value="$PROJECT_DIR$/gisgmp/src/test/java/ru/idsys/idbank/gisgmp/UI/model/Charges.java" />
+        <option value="$PROJECT_DIR$/gisgmp/src/test/resources/wsdl/unifoWS/unifo_1_2_3_4_5_6_7.xsd" />
+        <option value="$PROJECT_DIR$/gisgmp/src/test/resources/wsdl/unifoWS/unifo_1.wsdl" />
+        <option value="$PROJECT_DIR$/gisgmp/src/test/java/ru/idsys/idbank/gisgmp/UI/model/ChargesRs.java" />
+        <option value="$PROJECT_DIR$/gisgmp/src/main/java/ru/id_sys/schemas/idbank/unifo/_2012/_1/ExportChargesResponseEx.java" />
+        <option value="$PROJECT_DIR$/gisgmp/src/test/java/ru/idsys/idbank/gisgmp/UI/model/ChargesRsData.java" />
+        <option value="$PROJECT_DIR$/gisgmp/src/test/java/ru/idsys/idbank/gisgmp/WS/tests/ExportChargesRqWSTests.java" />
+        <option value="$PROJECT_DIR$/gisgmp/src/test/java/ru/idsys/idbank/gisgmp/UI/appmanager/HelperBase.java" />
+        <option value="$PROJECT_DIR$/gisgmp/src/test/java/ru/idsys/idbank/gisgmp/UI/appmanager/SessionHelper.java" />
+        <option value="$PROJECT_DIR$/gisgmp/src/test/java/ru/idsys/idbank/gisgmp/WS/appmanager/ApplicationManager.java" />
+        <option value="$PROJECT_DIR$/gisgmp/src/test/java/ru/idsys/idbank/gisgmp/WS/tests/TestBase.java" />
+        <option value="$PROJECT_DIR$/gisgmp/src/test/java/ru/idsys/idbank/gisgmp/WS/appmanager/SoupHelper.java" />
+        <option value="$PROJECT_DIR$/gisgmp/src/test/java/ru/idsys/idbank/gisgmp/UI/tests/TestBase.java" />
+        <option value="$PROJECT_DIR$/gisgmp/src/test/java/ru/idsys/idbank/gisgmp/UI/appmanager/NavigationHelper.java" />
+        <option value="$PROJECT_DIR$/gisgmp/src/test/java/ru/idsys/idbank/gisgmp/UI/generators/ChargeDataGenerator.java" />
+        <option value="$PROJECT_DIR$/gisgmp/src/test/java/ru/idsys/idbank/gisgmp/UI/model/ChargesRq.java" />
+        <option value="$PROJECT_DIR$/gisgmp/src/test/java/ru/idsys/idbank/gisgmp/UI/model/ChargesRqData.java" />
+        <option value="$PROJECT_DIR$/gisgmp/src/test/java/ru/idsys/idbank/gisgmp/WS/appmanager/HelperBase.java" />
+        <option value="$PROJECT_DIR$/gisgmp/src/test/java/ru/idsys/idbank/gisgmp/UI/appmanager/DbHelper.java" />
+        <option value="$PROJECT_DIR$/gisgmp/src/test/resources/local.properties" />
+        <option value="$PROJECT_DIR$/fns/src/test/java/ru/idsys/idbank/fns/innflchk/appmanager/SOAPHelper.java" />
+        <option value="$PROJECT_DIR$/gisgmp/build.gradle" />
+        <option value="$PROJECT_DIR$/gisgmp/src/test/java/ru/idsys/idbank/gisgmp/UI/appmanager/ApplicationManager.java" />
+        <option value="$PROJECT_DIR$/gisgmp/src/test/java/ru/idsys/idbank/gisgmp/UI/tests/group1/ExportChargesFiltersAndContextMenuCheckTests.java" />
+        <option value="$PROJECT_DIR$/gisgmp/src/test/java/ru/idsys/idbank/gisgmp/UI/tests/ExportChargesRqCreationTests.java" />
+        <option value="$PROJECT_DIR$/fns/src/test/java/ru/idsys/idbank/fns/innflchk/tests/UI/InnFLRqData.java" />
+        <option value="$PROJECT_DIR$/fns/src/test/java/ru/idsys/idbank/fns/innflchk/tests/UI/InnFLRsData.java" />
+        <option value="$PROJECT_DIR$/fns/src/test/java/ru/idsys/idbank/fns/innflchk/model/InnFLRqs.java" />
+        <option value="$PROJECT_DIR$/fns/src/test/java/ru/idsys/idbank/fns/innflchk/model/InnFLRss.java" />
+        <option value="$PROJECT_DIR$/fns/src/test/java/ru/idsys/idbank/fns/innflchk/appmanager/DbHelper.java" />
+        <option value="$PROJECT_DIR$/fns/src/test/java/ru/idsys/idbank/fns/innflchk/model/InnFLRsData.java" />
+        <option value="$PROJECT_DIR$/fns/src/test/java/ru/idsys/idbank/fns/innflchk/model/InnFLRqData.java" />
+        <option value="$PROJECT_DIR$/gisgmp/src/test/java/ru/idsys/idbank/gisgmp/UI/appmanager/TestlinkHelper.java" />
+        <option value="$PROJECT_DIR$/fns/src/test/java/ru/idsys/idbank/fns/innflchk/tests/TestBase.java" />
+        <option value="$PROJECT_DIR$/fns/build.gradle" />
+        <option value="$PROJECT_DIR$/fns/src/test/java/ru/idsys/idbank/fns/innflchk/appmanager/NavigationHelper.java" />
+        <option value="$PROJECT_DIR$/fns/src/test/java/ru/idsys/idbank/fns/innflchk/appmanager/TestlinkHelper.java" />
+        <option value="$PROJECT_DIR$/fns/src/test/java/ru/idsys/idbank/fns/innflchk/tests/UI/InnFLRqNewCreationTests.java" />
+        <option value="$PROJECT_DIR$/fns/src/test/java/ru/idsys/idbank/fns/innflchk/tests/UI/InnFLRqModificationTests.java" />
+        <option value="$PROJECT_DIR$/fns/src/test/resources/local.properties" />
+        <option value="$PROJECT_DIR$/fns/src/test/java/ru/idsys/idbank/fns/innflchk/tests/UI/InnFLRqDeletionTests.java" />
+        <option value="$PROJECT_DIR$/gisgmp/src/test/java/ru/idsys/idbank/gisgmp/UI/appmanager/ChargesHelper.java" />
+        <option value="$PROJECT_DIR$/fns/src/test/java/ru/idsys/idbank/fns/innflchk/appmanager/ApplicationManager.java" />
+        <option value="$PROJECT_DIR$/fns/src/test/java/ru/idsys/idbank/fns/innflchk/tests/UI/InnFLRqCopyCreationTests.java" />
+        <option value="$PROJECT_DIR$/fns/src/test/java/ru/idsys/idbank/fns/innflchk/appmanager/HelperBase.java" />
+        <option value="$PROJECT_DIR$/fns/src/test/java/ru/idsys/idbank/fns/innflchk/appmanager/InnFLHelper.java" />
+        <option value="$PROJECT_DIR$/fns/src/test/java/ru/idsys/idbank/fns/innflchk/appmanager/RDBHelper.java" />
+        <option value="$PROJECT_DIR$/fns/src/test/java/ru/idsys/idbank/fns/innflchk/tests/UI/FilterPanelChkTests.java" />
+        <option value="$PROJECT_DIR$/fns/src/test/java/ru/idsys/idbank/fns/innflchk/tests/UI/ScrollerCntxtMenuChkTests.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-2" />
+    <option name="y" value="-11" />
+    <option name="width" value="1694" />
+    <option name="height" value="1017" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="id_bank_autotests" type="b2602c69:ProjectViewProjectNode" />
+              <item name="id_bank_autotests" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="id_bank_autotests" type="b2602c69:ProjectViewProjectNode" />
+              <item name="id_bank_autotests" type="462c0819:PsiDirectoryNode" />
+              <item name="fns" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="id_bank_autotests" type="b2602c69:ProjectViewProjectNode" />
+              <item name="id_bank_autotests" type="462c0819:PsiDirectoryNode" />
+              <item name="fns" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="id_bank_autotests" type="b2602c69:ProjectViewProjectNode" />
+              <item name="id_bank_autotests" type="462c0819:PsiDirectoryNode" />
+              <item name="fns" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="id_bank_autotests" type="b2602c69:ProjectViewProjectNode" />
+              <item name="id_bank_autotests" type="462c0819:PsiDirectoryNode" />
+              <item name="fns" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="id_bank_autotests" type="b2602c69:ProjectViewProjectNode" />
+              <item name="id_bank_autotests" type="462c0819:PsiDirectoryNode" />
+              <item name="fns" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="innflchk" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="id_bank_autotests" type="b2602c69:ProjectViewProjectNode" />
+              <item name="id_bank_autotests" type="462c0819:PsiDirectoryNode" />
+              <item name="fns" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="innflchk" type="462c0819:PsiDirectoryNode" />
+              <item name="appmanager" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="id_bank_autotests" type="b2602c69:ProjectViewProjectNode" />
+              <item name="id_bank_autotests" type="462c0819:PsiDirectoryNode" />
+              <item name="fns" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="innflchk" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="id_bank_autotests" type="b2602c69:ProjectViewProjectNode" />
+              <item name="id_bank_autotests" type="462c0819:PsiDirectoryNode" />
+              <item name="fns" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="innflchk" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="id_bank_autotests" type="b2602c69:ProjectViewProjectNode" />
+              <item name="id_bank_autotests" type="462c0819:PsiDirectoryNode" />
+              <item name="fns" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="innflchk" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="UI" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="id_bank_autotests" type="b2602c69:ProjectViewProjectNode" />
+              <item name="id_bank_autotests" type="462c0819:PsiDirectoryNode" />
+              <item name="gisgmp" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="id_bank_autotests" type="b2602c69:ProjectViewProjectNode" />
+              <item name="id_bank_autotests" type="462c0819:PsiDirectoryNode" />
+              <item name="gisgmp" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="id_bank_autotests" type="b2602c69:ProjectViewProjectNode" />
+              <item name="id_bank_autotests" type="462c0819:PsiDirectoryNode" />
+              <item name="gisgmp" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="id_bank_autotests" type="b2602c69:ProjectViewProjectNode" />
+              <item name="id_bank_autotests" type="462c0819:PsiDirectoryNode" />
+              <item name="gisgmp" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="id_bank_autotests" type="b2602c69:ProjectViewProjectNode" />
+              <item name="id_bank_autotests" type="462c0819:PsiDirectoryNode" />
+              <item name="gisgmp" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="gisgmp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="id_bank_autotests" type="b2602c69:ProjectViewProjectNode" />
+              <item name="id_bank_autotests" type="462c0819:PsiDirectoryNode" />
+              <item name="gisgmp" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="gisgmp" type="462c0819:PsiDirectoryNode" />
+              <item name="UI" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="id_bank_autotests" type="b2602c69:ProjectViewProjectNode" />
+              <item name="id_bank_autotests" type="462c0819:PsiDirectoryNode" />
+              <item name="gisgmp" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="gisgmp" type="462c0819:PsiDirectoryNode" />
+              <item name="UI" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="id_bank_autotests" type="b2602c69:ProjectViewProjectNode" />
+              <item name="id_bank_autotests" type="462c0819:PsiDirectoryNode" />
+              <item name="gisgmp" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="gisgmp" type="462c0819:PsiDirectoryNode" />
+              <item name="UI" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="group1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="id_bank_autotests" type="b2602c69:ProjectViewProjectNode" />
+              <item name="id_bank_autotests" type="462c0819:PsiDirectoryNode" />
+              <item name="gisgmp" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="gisgmp" type="462c0819:PsiDirectoryNode" />
+              <item name="WS" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="id_bank_autotests" type="b2602c69:ProjectViewProjectNode" />
+              <item name="id_bank_autotests" type="462c0819:PsiDirectoryNode" />
+              <item name="gisgmp" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="gisgmp" type="462c0819:PsiDirectoryNode" />
+              <item name="WS" type="462c0819:PsiDirectoryNode" />
+              <item name="appmanager" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="id_bank_autotests" type="b2602c69:ProjectViewProjectNode" />
+              <item name="id_bank_autotests" type="462c0819:PsiDirectoryNode" />
+              <item name="gisgmp" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="gisgmp" type="462c0819:PsiDirectoryNode" />
+              <item name="WS" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1574751612291" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../learn_java" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Рабочая папка\JavaTestingEnvironment\TestsProjects\id_bank_autotests\gisgmp\src\test\resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ru.idsys.idbank.fns.innflchk.appmanager" />
+      <recent name="ru.idsys.idbank.fns.innflchk.tests" />
+      <recent name="ru.idsys.idbank.gisgmp.WS.tests" />
+      <recent name="ru.idsys.idbank.gisgmp.WS.appmanager" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Рабочая папка\JavaTestingEnvironment\TestsProjects\id_bank_autotests\fns\src\test\java\ru\idsys\idbank\fns\innflchk\appmanager" />
+      <recent name="C:\Рабочая папка\JavaTestingEnvironment\TestsProjects\id_bank_autotests\fns\src\test\resources" />
+      <recent name="C:\Рабочая папка\JavaTestingEnvironment\TestsProjects\id_bank_autotests\gisgmp\src\test\resources\wsdl" />
+      <recent name="C:\Рабочая папка\JavaTestingEnvironment\TestsProjects\id_bank_autotests\gisgmp\src\test\resources" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="TestNG.FilterPanelChkTests">
+    <configuration name="FilterPanelChkTests" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="fns.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.idsys.idbank.fns.innflchk.tests.UI.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.idsys.idbank.fns.innflchk.tests.UI" />
+      <option name="MAIN_CLASS_NAME" value="ru.idsys.idbank.fns.innflchk.tests.UI.FilterPanelChkTests" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InnFLRqCopyCreationTests" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="fns.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.idsys.idbank.fns.innflchk.tests.UI.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.idsys.idbank.fns.innflchk.tests.UI" />
+      <option name="MAIN_CLASS_NAME" value="ru.idsys.idbank.fns.innflchk.tests.UI.InnFLRqCopyCreationTests" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InnFLRqDeletionTests" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="fns.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.idsys.idbank.fns.innflchk.tests.UI.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.idsys.idbank.fns.innflchk.tests.UI" />
+      <option name="MAIN_CLASS_NAME" value="ru.idsys.idbank.fns.innflchk.tests.UI.InnFLRqDeletionTests" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InnFLRqNewCreationTests" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="fns.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.idsys.idbank.fns.innflchk.tests.UI.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.idsys.idbank.fns.innflchk.tests.UI" />
+      <option name="MAIN_CLASS_NAME" value="ru.idsys.idbank.fns.innflchk.tests.UI.InnFLRqNewCreationTests" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ru.idsys.idbank.fns.innflchk.tests.UI" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="fns.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.idsys.idbank.fns.innflchk.tests.UI.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.idsys.idbank.fns.innflchk.tests.UI" />
+      <option name="TEST_OBJECT" value="PACKAGE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.FilterPanelChkTests" />
+        <item itemvalue="TestNG.InnFLRqCopyCreationTests" />
+        <item itemvalue="TestNG.ru.idsys.idbank.fns.innflchk.tests.UI" />
+        <item itemvalue="TestNG.InnFLRqNewCreationTests" />
+        <item itemvalue="TestNG.InnFLRqDeletionTests" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="179d9e54-cc3d-4d8b-a059-c8c6cde1bc39" name="Default Changelist" comment="" />
+      <created>1551951694546</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1551951694546</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="FilterPanelChkTests - 2019.11.20 at 11h 07m 42s.xml">
+      <configuration name="FilterPanelChkTests" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="FilterPanelChkTests - 2019.11.20 at 11h 08m 10s.xml">
+      <configuration name="FilterPanelChkTests" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="FilterPanelChkTests - 2019.11.20 at 11h 18m 46s.xml">
+      <configuration name="FilterPanelChkTests" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="FilterPanelChkTests - 2019.11.20 at 11h 32m 19s.xml">
+      <configuration name="FilterPanelChkTests" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="FilterPanelChkTests - 2019.11.20 at 11h 35m 00s.xml">
+      <configuration name="FilterPanelChkTests" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="FilterPanelChkTests - 2019.11.20 at 11h 38m 43s.xml">
+      <configuration name="FilterPanelChkTests" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="FilterPanelChkTests - 2019.11.20 at 12h 09m 43s.xml">
+      <configuration name="FilterPanelChkTests" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="FilterPanelChkTests - 2019.11.20 at 12h 11m 06s.xml">
+      <configuration name="FilterPanelChkTests" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="FilterPanelChkTests - 2019.11.20 at 12h 15m 34s.xml">
+      <configuration name="FilterPanelChkTests" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="FilterPanelChkTests - 2019.11.20 at 15h 31m 40s.xml">
+      <configuration name="FilterPanelChkTests" configurationId="TestNG" />
+    </history-entry>
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23454158" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.21885157" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.24160346" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4626219" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32936078" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Build" order="10" weight="0.32936078" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32936078" />
+      <window_info anchor="right" id="Coverage" sideWeight="0.5007257" side_tool="true" weight="0.28731343" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Maven" order="4" />
+      <window_info anchor="right" id="Gradle" order="5" sideWeight="0.4992743" weight="0.28731343" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info anchor="right" id="Capture Analysis" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2228145" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.21885157" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.24377032" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.49729145" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Build" order="10" weight="0.32936078" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32936078" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Maven" order="4" />
+      <window_info anchor="right" id="Gradle" order="5" weight="0.28731343" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info anchor="right" id="Capture Analysis" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+    </layout-to-restore>
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="setValue">
+      <expression>
+        <expression-string>&quot;01.01.2010 9:55:26&quot;</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>!filterName.equals(&quot;&quot;)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>filterName.equals(&quot;&quot;)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>filterName == &quot;&quot;</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>filterName</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>filterName != null</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>filterName != &quot;&quot;</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>action.sendKeys(text)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>wd.findElement(locator).sendKeys(text)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>click(locator);</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>wd.findElement(locator).sendKeys(Keys.chord(Keys.CONTROL, Keys.HOME))</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/br.eti.kinoshita/testlink-java-api/1.9.19-0/ce0806e9f6c00df0ef749c67182def53b9c84ce7/testlink-java-api-1.9.19-0-sources.jar!/br/eti/kinoshita/testlinkjavaapi/BaseService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="71" column="25" selection-start-line="71" selection-start-column="25" selection-end-line="71" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/br.eti.kinoshita/testlink-java-api/1.9.19-0/ce0806e9f6c00df0ef749c67182def53b9c84ce7/testlink-java-api-1.9.19-0-sources.jar!/br/eti/kinoshita/testlinkjavaapi/model/Build.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1012">
+          <caret line="41" column="13" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
+          <folding>
+            <element signature="e#2432#2433#0" expanded="true" />
+            <element signature="e#2457#2458#0" expanded="true" />
+            <element signature="e#3811#3812#0" expanded="true" />
+            <element signature="e#3847#3848#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/br.eti.kinoshita/testlink-java-api/1.9.19-0/ce0806e9f6c00df0ef749c67182def53b9c84ce7/testlink-java-api-1.9.19-0-sources.jar!/br/eti/kinoshita/testlinkjavaapi/BuildService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="110" column="20" selection-start-line="110" selection-start-column="20" selection-end-line="110" selection-end-column="20" />
+          <folding>
+            <element signature="e#5457#5473#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/br.eti.kinoshita/testlink-java-api/1.9.19-0/ce0806e9f6c00df0ef749c67182def53b9c84ce7/testlink-java-api-1.9.19-0-sources.jar!/br/eti/kinoshita/testlinkjavaapi/TestLinkAPI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="655" column="42" lean-forward="true" selection-start-line="655" selection-start-column="42" selection-end-line="655" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fns/src/test/java/ru/idsys/idbank/fns/innflchk/model/InnFLRqData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="32" column="22" selection-start-line="32" selection-start-column="11" selection-end-line="32" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.testng/testng/6.14.3/bfd2538501a129a142fe8366169c48b91609dc0b/testng-6.14.3-sources.jar!/org/testng/ITestResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="49" column="26" lean-forward="true" selection-start-line="49" selection-start-column="26" selection-end-line="49" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/src.zip!/java/lang/Throwable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="113" column="13" selection-start-line="113" selection-start-column="13" selection-end-line="113" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hamcrest/java-hamcrest/2.0.0.0/a0413cf330eddf469d7600b36b4d115170f95a62/java-hamcrest-2.0.0.0-sources.jar!/org/hamcrest/MatcherAssert.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
+          <folding>
+            <element signature="e#129#130#0" expanded="true" />
+            <element signature="e#176#177#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fns/src/test/java/ru/idsys/idbank/fns/innflchk/appmanager/TestlinkHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="863">
+          <caret line="56" column="69" selection-start-line="56" selection-start-column="69" selection-end-line="56" selection-end-column="69" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/src.zip!/java/lang/CharSequence.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2276">
+          <caret line="58" column="17" selection-start-line="58" selection-start-column="17" selection-end-line="58" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-api/3.14.0/8c0af6fdccdc89a4394de7e3a8817ed2d6e41d7d/selenium-api-3.14.0-sources.jar!/org/openqa/selenium/interactions/Actions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="113" column="34" lean-forward="true" selection-start-line="113" selection-start-column="34" selection-end-line="113" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fns/src/test/java/ru/idsys/idbank/fns/innflchk/tests/UI/InnFLRqModificationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="49" column="35" lean-forward="true" selection-start-line="49" selection-start-column="35" selection-end-line="49" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fns/src/test/resources/local.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="34" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fns/src/test/java/ru/idsys/idbank/fns/innflchk/tests/UI/InnFLRqNewCreationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="124" column="25" lean-forward="true" selection-start-line="124" selection-start-column="25" selection-end-line="124" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gisgmp/src/test/java/ru/idsys/idbank/gisgmp/UI/generators/ChargeDataGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gisgmp/src/test/java/ru/idsys/idbank/gisgmp/UI/model/ChargesRq.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gisgmp/src/test/java/ru/idsys/idbank/gisgmp/UI/tests/ExportChargesRqCreationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-816">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fns/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="54" selection-start-line="11" selection-start-column="54" selection-end-line="11" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gisgmp/src/test/java/ru/idsys/idbank/gisgmp/WS/tests/ExportChargesRqWSTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fns/src/test/java/ru/idsys/idbank/fns/innflchk/tests/TestBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="526">
+          <caret line="37" column="21" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1121#1122#0" expanded="true" />
+            <element signature="e#1147#1148#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fns/src/test/java/ru/idsys/idbank/fns/innflchk/model/InnFLRqs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="45" column="20" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/src.zip!/java/text/SimpleDateFormat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="577" column="11" selection-start-line="577" selection-start-column="11" selection-end-line="577" selection-end-column="11" />
+          <folding>
+            <element signature="e#23443#23444#0" expanded="true" />
+            <element signature="e#23515#23516#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/src.zip!/java/util/Calendar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="825">
+          <caret line="2840" column="16" selection-start-line="2840" selection-start-column="16" selection-end-line="2840" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gisgmp/src/test/java/ru/idsys/idbank/gisgmp/WS/appmanager/SoupHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="139" column="23" selection-start-line="139" selection-start-column="23" selection-end-line="139" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fns/src/test/java/ru/idsys/idbank/fns/innflchk/tests/UI/InnFLRqDeletionTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="87" column="33" selection-start-line="87" selection-start-column="33" selection-end-line="87" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/src.zip!/java/util/concurrent/TimeUnit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="70" column="12" selection-start-line="70" selection-start-column="12" selection-end-line="70" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/src.zip!/java/util/Map.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="211" column="6" selection-start-line="211" selection-start-column="6" selection-end-line="211" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-api/3.14.0/8c0af6fdccdc89a4394de7e3a8817ed2d6e41d7d/selenium-api-3.14.0-sources.jar!/org/openqa/selenium/SearchContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-api/3.14.0/8c0af6fdccdc89a4394de7e3a8817ed2d6e41d7d/selenium-api-3.14.0-sources.jar!/org/openqa/selenium/TakesScreenshot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="31" column="17" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/src.zip!/java/util/Objects.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="202" column="45" lean-forward="true" selection-start-line="202" selection-start-column="45" selection-end-line="202" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/src.zip!/java/util/function/Function.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="26" column="21" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/src.zip!/java/util/function/UnaryOperator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="40" column="45" lean-forward="true" selection-start-line="40" selection-start-column="45" selection-end-line="40" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/src.zip!/java/util/List.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="27" column="31" lean-forward="true" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-api/3.14.0/8c0af6fdccdc89a4394de7e3a8817ed2d6e41d7d/selenium-api-3.14.0-sources.jar!/org/openqa/selenium/WebDriver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="110" column="7" selection-start-line="110" selection-start-column="7" selection-end-line="110" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-api/3.14.0/8c0af6fdccdc89a4394de7e3a8817ed2d6e41d7d/selenium-api-3.14.0-sources.jar!/org/openqa/selenium/WebElement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-207">
+          <caret line="30" column="17" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-remote-driver/3.14.0/6a4c36c02a1f03bdcf5769bffec9ed530ca51111/selenium-remote-driver-3.14.0-sources.jar!/org/openqa/selenium/remote/RemoteWebElement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="275" column="21" selection-start-line="275" selection-start-column="21" selection-end-line="275" selection-end-column="21" />
+          <folding>
+            <element signature="e#3012#3013#0" expanded="true" />
+            <element signature="e#3085#3086#0" expanded="true" />
+            <element signature="e#9165#9166#0" expanded="true" />
+            <element signature="e#9217#9218#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-remote-driver/3.14.0/6a4c36c02a1f03bdcf5769bffec9ed530ca51111/selenium-remote-driver-3.14.0-sources.jar!/org/openqa/selenium/remote/RemoteWebDriver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4330">
+          <caret line="537" column="21" selection-start-line="537" selection-start-column="21" selection-end-line="537" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gisgmp/src/test/java/ru/idsys/idbank/gisgmp/UI/appmanager/ChargesHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="168" column="16" selection-start-line="168" selection-start-column="16" selection-end-line="168" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gisgmp/src/test/java/ru/idsys/idbank/gisgmp/UI/tests/TestBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gisgmp/src/test/java/ru/idsys/idbank/gisgmp/WS/appmanager/HelperBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="46" column="58" lean-forward="true" selection-start-line="46" selection-start-column="58" selection-end-line="46" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gisgmp/src/test/java/ru/idsys/idbank/gisgmp/UI/tests/group1/ExportChargesFiltersAndContextMenuCheckTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="33" column="28" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.testng/testng/6.14.3/bfd2538501a129a142fe8366169c48b91609dc0b/testng-6.14.3-sources.jar!/org/testng/internal/Invoker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="592" selection-start-line="592" selection-end-line="592" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fns/src/test/java/ru/idsys/idbank/fns/innflchk/appmanager/ApplicationManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="77" selection-start-line="77" selection-end-line="77" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3307#3308#0" expanded="true" />
+            <element signature="e#3341#3342#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fns/src/test/java/ru/idsys/idbank/fns/innflchk/appmanager/SessionHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fns/src/test/java/ru/idsys/idbank/fns/innflchk/appmanager/InnFLHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fns/src/test/java/ru/idsys/idbank/fns/innflchk/appmanager/HelperBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-252">
+          <caret line="55" column="27" selection-start-line="55" selection-start-column="24" selection-end-line="55" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1486#1487#0" expanded="true" />
+            <element signature="e#1533#1534#0" expanded="true" />
+            <element signature="e#5722#5723#0" expanded="true" />
+            <element signature="e#5773#5774#0" expanded="true" />
+            <element signature="e#15625#15626#0" expanded="true" />
+            <element signature="e#15702#15703#0" expanded="true" />
+            <element signature="e#16249#16250#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fns/src/test/java/ru/idsys/idbank/fns/innflchk/appmanager/NavigationHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="15" column="42" lean-forward="true" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fns/src/test/java/ru/idsys/idbank/fns/innflchk/appmanager/RDBHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="499">
+          <caret line="388" column="9" selection-start-line="388" selection-start-column="9" selection-end-line="388" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fns/src/test/java/ru/idsys/idbank/fns/innflchk/tests/UI/InnFLRqCopyCreationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-620">
+          <caret line="93" selection-start-line="93" selection-end-line="93" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#824#832#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fns/src/test/java/ru/idsys/idbank/fns/innflchk/tests/UI/FilterPanelChkTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="519">
+          <caret line="295" selection-start-line="274" selection-end-line="295" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fns/src/test/java/ru/idsys/idbank/fns/innflchk/tests/UI/ScrollerCntxtMenuChkTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="739">
+          <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>id_bank_autotests</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Gradle: antlr:antlr:2.7.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: br.eti.kinoshita:testlink-java-api:1.9.19-0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/br.eti.kinoshita/testlink-java-api/1.9.19-0/dbde98e049c112c73ec796c0214be3cce60f0bd5/testlink-java-api-1.9.19-0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/br.eti.kinoshita/testlink-java-api/1.9.19-0/ce0806e9f6c00df0ef749c67182def53b9c84ce7/testlink-java-api-1.9.19-0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
